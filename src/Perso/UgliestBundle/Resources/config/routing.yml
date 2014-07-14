@@ -1,0 +1,3 @@
+perso_ugliest_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PersoUgliestBundle:Default:index }

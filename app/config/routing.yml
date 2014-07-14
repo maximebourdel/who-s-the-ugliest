@@ -1,0 +1,4 @@
+perso_ugliest:
+    resource: "@PersoUgliestBundle/Resources/config/routing.yml"
+    prefix:   /
+
