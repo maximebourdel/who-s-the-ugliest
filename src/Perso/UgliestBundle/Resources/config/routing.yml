@@ -1,3 +1,7 @@
 perso_ugliest_homepage:
     path:     /index
     defaults: { _controller: "PersoUgliestBundle:Default:index" }
+
+perso_ugliest_compare:
+    path:     /compare
+    defaults: { _controller: "PersoUgliestBundle:Default:compare" }

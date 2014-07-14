@@ -1,0 +1,31 @@
+{% extends "::layout.html.twig" %} 
+
+{% block body %}
+
+{# On utilise une variable temporaire, qu'on définit à false si elle n'est pas déjà définie #}
+{% set accueil = accueil|default(false) %}
+
+<h2>
+  VOICI LES NOMS
+</h2>
+
+
+
+  <div class="well well-small">
+    <p><i>
+      {% for person in list_persons %}
+        {{ person.surname }}{% if not loop.last %}, {% endif %}
+        </br>
+        {% if person.photo is not null %}
+            <img 
+				src="{{ asset(person.photo.webPath) }}"
+  				alt="{{ person.photo.alt }}"
+			/> 
+        {% endif %}
+         </br>
+      {% endfor %}
+    </i></p>
+  </div>
+
+
+{% endblock %}
