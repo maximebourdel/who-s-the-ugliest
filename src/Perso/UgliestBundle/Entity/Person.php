@@ -3,12 +3,14 @@
 namespace Perso\UgliestBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Person
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Perso\UgliestBundle\Entity\PersonRepository")
+ * @UniqueEntity(fields={"surname","name"})
  */
 class Person
 {
@@ -25,6 +27,7 @@ class Person
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(unique=true)
      */
     private $name;
 
@@ -32,6 +35,7 @@ class Person
      * @var string
      *
      * @ORM\Column(name="surname", type="string", length=255)
+     * @ORM\Column(unique=true)
      */
     private $surname;
 
@@ -50,6 +54,14 @@ class Person
     private $photo;
 
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="points", type="integer", options={"default":0})
+     */
+    private $points;
+    
+    
     /**
      * Get id
      *
@@ -150,5 +162,28 @@ class Person
     public function getPhoto()
     {
         return $this->photo;
+    }
+    
+    /**
+     * Set points
+     *
+     * @param string $points
+     * @return Person
+     */
+    public function setPoints($points)
+    {
+        $this->points = $points;
+    
+        return $this;
+    }
+    
+    /**
+     * Get points
+     *
+     * @return int
+     */
+    public function getPoints()
+    {
+        return $this->points;
     }
 }
