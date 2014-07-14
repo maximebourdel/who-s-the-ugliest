@@ -5,27 +5,23 @@
 {# On utilise une variable temporaire, qu'on définit à false si elle n'est pas déjà définie #}
 {% set accueil = accueil|default(false) %}
 
-<h2>
-  VOICI LES NOMS
-</h2>
-
-
-
-  <div class="well well-small">
-    <p><i>
+    <h2>
+      VOICI LES NOMS
+    </h2>
+    
       {% for person in list_persons %}
-        {{ person.surname }}{% if not loop.last %}, {% endif %}
-        </br>
+       <div class="col-lg-2">
         {% if person.photo is not null %}
-            <img 
+            <img style="max-width: 150px;"
 				src="{{ asset(person.photo.webPath) }}"
   				alt="{{ person.photo.alt }}"
 			/> 
-        {% endif %}
-         </br>
+        {% endif %} 
+        {{ person.surname }} {{ person.name }}
+        </div>
       {% endfor %}
-    </i></p>
-  </div>
+     
+   
 
 
 {% endblock %}
