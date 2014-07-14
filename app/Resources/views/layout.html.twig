@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		{% stylesheets 
+			filter='cssrewrite,?yui_css' '@MopaBootstrapBundle/Resources/bootstrap/dist/css/*'%}
+			<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+		{% endstylesheets %}
+
+		{% javascripts
+       		'@MopaBootstrapBundle/Resources/bootstrap/js/*'
+   		%}
+        	<script src="{{ asset_url }}"></script>
+    	{% endjavascripts %}
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{% block title %}myBlog{% endblock %}</title>
+		
+	</head>
+  <body>
+  
+	  <nav role="navigation" class="navbar navbar-inverse">
+		<div class="container-fluid">
+	 		<!-- Collect the nav links, forms, and other content for toggling -->
+			<div id="bs-example-navbar-collapse-9" class="collapse navbar-collapse">
+				<!-- mettre des UL LI -->
+	        </div><!-- /.navbar-collapse -->
+	 	</div><!-- /.container-fluid -->
+	</nav>
+  	
+  	
+    {% block body %}
+	    	
+    {% endblock %}
+    
+    <div class="container">
+    	© Maxime Bourdel 2014 Tous droits réservés
+    </div>
+  
+  </body>
+</html>
+
+
