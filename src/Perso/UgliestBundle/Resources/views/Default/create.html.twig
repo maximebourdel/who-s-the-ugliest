@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %} 
+
+{% block title %}{{
+	parent() }} - Create
+{% endblock %} 
+
+{% block body %}
+	<div class="container">
+		{# Le formulaire reste inchangé #}
+		<div class="well">
+  			<form method="post" {{ form_enctype(form) }}>
+   				{{ form_widget(form) }}
+   			 	<input type="submit" class="btn btn-primary" />
+  			</form>
+		</div>
+	</div>
+
+<script> $('#Exprimez-vous').addClass('active')</script>
+{% endblock %}

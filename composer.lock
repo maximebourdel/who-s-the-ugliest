@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a799e82f8458887fcd3a449a169796f2",
+    "hash": "bec489bca883ac4785a9ea1d2b07d61d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1770,16 +1770,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.17",
+            "version": "v2.3.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "c02f56f7948f2699c8cc8b118c7faeb13470e357"
+                "reference": "75e07e6bde6391a6f49c8546a43740c80ac1b06b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c02f56f7948f2699c8cc8b118c7faeb13470e357",
-                "reference": "c02f56f7948f2699c8cc8b118c7faeb13470e357",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/75e07e6bde6391a6f49c8546a43740c80ac1b06b",
+                "reference": "75e07e6bde6391a6f49c8546a43740c80ac1b06b",
                 "shasum": ""
             },
             "require": {
@@ -1876,44 +1876,58 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-07-07 12:59:36"
+            "time": "2014-07-15 14:20:44"
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v3.0.0",
+            "version": "dev-fix-14134",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
+                "reference": "74691b7e27b1015085427e024ff31d2b6b24de0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
-                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/74691b7e27b1015085427e024ff31d2b6b24de0a",
+                "reference": "74691b7e27b1015085427e024ff31d2b6b24de0a",
                 "shasum": ""
             },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache-2.0"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "sugeng tigefa",
-                    "email": "tigefa@gmail.com"
-                },
-                {
                     "name": "Jacob Thornton",
                     "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
                 }
             ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
             "homepage": "http://getbootstrap.com",
             "keywords": [
-                "bootstrap",
-                "css"
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
             ],
-            "time": "2013-08-19 21:18:20"
+            "time": "2014-07-15 00:17:38"
         },
         {
             "name": "twig/extensions",
@@ -2031,6 +2045,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mopa/bootstrap-bundle": 20,
+        "twbs/bootstrap": 20,
         "jms/di-extra-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "doctrine/data-fixtures": 20

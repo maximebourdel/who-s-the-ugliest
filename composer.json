@@ -22,10 +22,10 @@
 		"sensio/generator-bundle" : "2.3.*",
 		"incenteev/composer-parameter-handler" : "~2.0",
 		"mopa/bootstrap-bundle" : "2.3.*@dev",
-		"twbs/bootstrap" : "v3.0.0",
-		"jms/di-extra-bundle": "dev-master",
- 		"doctrine/doctrine-fixtures-bundle": "dev-master",
-  		"doctrine/data-fixtures": "@dev"
+		"twbs/bootstrap": "dev-fix-14134",
+		"jms/di-extra-bundle" : "dev-master",
+		"doctrine/doctrine-fixtures-bundle" : "dev-master",
+		"doctrine/data-fixtures" : "@dev"
 	},
 	"scripts" : {
 		"post-install-cmd" : [

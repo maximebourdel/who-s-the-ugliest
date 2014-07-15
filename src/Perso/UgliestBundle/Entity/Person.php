@@ -63,6 +63,17 @@ class Person
     private $points;
     
     
+    
+    // Et modifions le constructeur pour mettre cet attribut publication à true par défaut
+    public function __construct()
+    {
+        $this->category = array();
+        $this->points = 0;
+    }
+    
+    
+    
+    
     /**
      * Get id
      *

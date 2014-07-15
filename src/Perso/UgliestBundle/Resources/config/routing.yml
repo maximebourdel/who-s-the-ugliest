@@ -5,3 +5,8 @@ perso_ugliest_homepage:
 perso_ugliest_compare:
     path:     /compare
     defaults: { _controller: "PersoUgliestBundle:Default:compare" }
+    
+perso_ugliest_create:
+    path:     /create
+    defaults: { _controller: "PersoUgliestBundle:Default:create" }
+  
