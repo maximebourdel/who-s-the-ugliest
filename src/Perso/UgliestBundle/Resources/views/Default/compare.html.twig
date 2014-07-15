@@ -1,10 +1,6 @@
 {% extends "::layout.html.twig" %} 
 
 {% block body %}
-
-{# On utilise une variable temporaire, qu'on définit à false si elle n'est pas déjà définie #}
-{% set accueil = accueil|default(false) %}
-
     <h2>
       VOICI LES NOMS
     </h2>
@@ -23,5 +19,10 @@
      
    
 
+<script> $('#compare').addClass('active')</script>
+{% endblock %}
 
+
+{% block javascripts %}
+    <script> $('#compare').addClass('active')</script>
 {% endblock %}
