@@ -69,11 +69,11 @@ class DefaultController extends Controller
                ) );
     }
     
-    public function compareAction()
+    public function compareAction(Person $person=null)
     {
         // On récupère les articleCompetence pour l'article $article
         $list_persons = $this->getDoctrine ()->getManager ()->getRepository ( 'PersoUgliestBundle:Person' )->findAll();
-    
+        
         //On sélectionne deux clés au hasard
         $random_key = array_rand($list_persons, 2);
         
@@ -81,9 +81,24 @@ class DefaultController extends Controller
         $list_versus[] = $list_persons[$random_key[0]];
         $list_versus[] = $list_persons[$random_key[1]];
         
-        // Puis modifiez la ligne du render comme ceci, pour prendre en compte les variables :
-        return $this->render ( 'PersoUgliestBundle:Default:compare.html.twig', array (
-                'list_versus' => $list_versus
-        ) );
+        //c'est ici que l'ont incrémente le nombre de points su quelqu'un existe
+        if($person != null){
+            $person->increasePoints();
+            
+            $em = $this->getDoctrine ()->getManager ();
+            $em->persist ( $person );
+            $em->flush ();
+            
+            // Puis on recommence l'action de départ
+            return $this->redirect ( $this->generateUrl ( 'perso_ugliest_compare'  ) );
+            
+        }else {
+            // Puis modifiez la ligne du render comme ceci, pour prendre en compte les variables :
+            return $this->render ( 'PersoUgliestBundle:Default:compare.html.twig', array (
+                    'list_versus' => $list_versus,
+                    
+            ) );
+       } 
+            
     }
 }

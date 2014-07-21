@@ -198,4 +198,16 @@ class Person
     {
         return $this->points;
     }
+    
+    /**
+     * Increase points
+     *
+     * @return Person
+     */
+    public function increasePoints()
+    {
+       $this->points++;
+       
+       return $this;
+    }
 }

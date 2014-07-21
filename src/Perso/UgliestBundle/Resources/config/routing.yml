@@ -3,8 +3,8 @@ perso_ugliest_homepage:
     defaults: { _controller: "PersoUgliestBundle:Default:index" }
 
 perso_ugliest_compare:
-    path:     /compare
-    defaults: { _controller: "PersoUgliestBundle:Default:compare" }
+    path:     /compare/{id}
+    defaults: { _controller: "PersoUgliestBundle:Default:compare", id = null }
     
 perso_ugliest_list:
     path:     /list
