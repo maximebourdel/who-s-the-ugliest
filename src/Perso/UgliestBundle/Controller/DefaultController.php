@@ -58,14 +58,32 @@ class DefaultController extends Controller
 		) );
     }
     
-    public function compareAction()
+    public function listAction()
     {
         // On récupère les articleCompetence pour l'article $article
         $list_persons = $this->getDoctrine ()->getManager ()->getRepository ( 'PersoUgliestBundle:Person' )->findAll();
     
         // Puis modifiez la ligne du render comme ceci, pour prendre en compte les variables :
-        return $this->render ( 'PersoUgliestBundle:Default:compare.html.twig', array (
+        return $this->render ( 'PersoUgliestBundle:Default:list.html.twig', array (
                     'list_persons' => $list_persons
                ) );
+    }
+    
+    public function compareAction()
+    {
+        // On récupère les articleCompetence pour l'article $article
+        $list_persons = $this->getDoctrine ()->getManager ()->getRepository ( 'PersoUgliestBundle:Person' )->findAll();
+    
+        //On sélectionne deux clés au hasard
+        $random_key = array_rand($list_persons, 2);
+        
+        //contient le nom de la personne sélectionnée
+        $list_versus[] = $list_persons[$random_key[0]];
+        $list_versus[] = $list_persons[$random_key[1]];
+        
+        // Puis modifiez la ligne du render comme ceci, pour prendre en compte les variables :
+        return $this->render ( 'PersoUgliestBundle:Default:compare.html.twig', array (
+                'list_versus' => $list_versus
+        ) );
     }
 }

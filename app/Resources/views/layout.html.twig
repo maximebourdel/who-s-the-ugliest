@@ -30,6 +30,9 @@
 				    <li id="home">  
 				        <a href="{{ path('perso_ugliest_homepage' ) }}">Home</a>
 				    </li>
+				    <li id="list">
+                        <a href="{{ path('perso_ugliest_list' ) }}">List</a>
+				    </li>
 				    <li id="compare">
 				        <a href="{{ path('perso_ugliest_compare' ) }}">Compare</a>
 				    </li>
@@ -62,7 +65,9 @@
     
         <script src="//code.jquery.com/jquery-1.9.1.js"></script>
     	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
     	
+    	<link href="../../app/Resources/views/css/styles.css" rel="stylesheet">
     
     	{% block javascripts %}{% endblock %}
     

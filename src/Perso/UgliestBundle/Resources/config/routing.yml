@@ -6,6 +6,10 @@ perso_ugliest_compare:
     path:     /compare
     defaults: { _controller: "PersoUgliestBundle:Default:compare" }
     
+perso_ugliest_list:
+    path:     /list
+    defaults: { _controller: "PersoUgliestBundle:Default:list" }  
+ 
 perso_ugliest_create:
     path:     /create
     defaults: { _controller: "PersoUgliestBundle:Default:create" }

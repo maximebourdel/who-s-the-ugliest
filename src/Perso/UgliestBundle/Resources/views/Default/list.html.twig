@@ -1,0 +1,31 @@
+{% extends "::layout.html.twig" %} 
+
+{% block body %}
+    <h2>
+      Here are the all the competitors
+    </h2>
+    
+    <section class="row">
+        {% for person in list_persons %}
+        <div class="col-lg-2"
+             style="border-radius: 6px; border: 2px solid black; line-height: 40px; text-align: center; padding-top: 8px;"
+        >
+            {% if person.photo is not null %}
+                <img style="max-width: 150px;"
+    				src="{{ asset(person.photo.webPath) }}"
+      				alt="{{ person.photo.alt }}"
+    			/> 
+            {% endif %}
+            <div class="col-lg-12" style="max-height: 40px;">
+                {{ person.surname }} {{ person.name }}
+            </div>   
+        </div>
+      {% endfor %}
+    </section>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script> $('#list').addClass('active')</script>
+{% endblock %}
