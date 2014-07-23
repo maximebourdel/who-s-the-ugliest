@@ -77,7 +77,7 @@ class DefaultController extends Controller
         //On sélectionne deux clés au hasard
         $random_key = array_rand($list_persons, 2);
         
-        //contient le nom de la personne sélectionnée
+        //contient le nom des personnes sélectionnées
         $list_versus[] = $list_persons[$random_key[0]];
         $list_versus[] = $list_persons[$random_key[1]];
         
