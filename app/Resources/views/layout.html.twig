@@ -62,12 +62,12 @@
     		<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
     	{% endstylesheets %}
     	
-    	<link href="../../app/Resources/views/css/styles.css" rel="stylesheet">
+    	<link href="../../app/Resources/views/css/brand-buttons.min.css"   rel="stylesheet">
+    	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    	
     	
     	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
     	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    	
-    	
     	
         {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/dist/js/*' %}
             <script src="{{ asset_url }}"></script>
@@ -82,19 +82,78 @@
         {% endjavascripts %}
         
         	
-        	
         <!--javascript -->
     	{% block javascripts %}
     	
     	{% endblock %}
         <!--/javascript -->
 
+    	
+ 
+        
     
-        <div class="container">
-        	© Maxime Bourdel 2014 Tous droits réservés
-        </div>
+        <br />
+        <br />
+        <br />
         
+    
+        <footer class="bs-docs-footer" role="contentinfo">
         
+            <div class="container">
+            
+                <div class="col-md-2 btn-demo"></div>
+                
+                <div class="col-md-2 btn-demo">
+                   <a href="https://plus.google.com/+MaximeBourdel09/posts">  
+                        <button class="btn btn-md btn-googleplus">
+                            <i class="fa fa-google-plus"> Google+</i>
+                        </button>
+                    </a>
+                </div>
+                
+                <div class="col-md-2 btn-demo">
+                    <a href="https://www.facebook.com/maxime.bourdel">  
+                        <button class="btn btn-md btn-facebook">
+                            <i class="fa fa-facebook"> Facebook</i>
+                        </button>
+                    </a>
+                </div>
+                
+                <div class="col-md-2 btn-demo">
+                   <a href="https://www.linkedin.com/profile/view?id=342130999&trk=nav_responsive_tab_profile_pic">  
+                        <button class="btn btn-md btn-linkedin">
+                            <i class="fa fa-linkedin"> Linked In</i> 
+                        </button> 
+                    </a> 
+                </div>
+            
+                <div class="col-md-2 btn-demo">
+                    <a href=" https://github.com/maximebourdel">  
+                        <button class="btn btn-md btn-github">
+                            <i class="fa fa-github-square"> Github</i>
+                        </button>
+                    </a>  
+                </div>
+            
+                <div class="col-md-2 btn-demo"></div>
+            
+            
+                <div class="col-md-12 btn-demo">
+                    <p class="text-center">© Maxime Bourdel 2014 Tous droits réservés </p>
+                </div>
+                
+            </div>
+            
+        </footer>
+
     </body>
+    
 </html>
 
+            
+
+
+
+ 
+
+          
