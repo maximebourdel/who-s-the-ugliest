@@ -7,6 +7,95 @@
 {% block body %}
    
 
+ <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Hello you!</h1>
+              <p> Welcome to my first website! </p>
+              <br />
+              </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>An active Website!</h1>
+              <p>Next step is going to be the creation of a top 10! Thanks to it, everyone will be able to know WHO IS THE UGLIEST!</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>To know more</h1>
+              <p>Please, click the links below</p>
+              <p>
+                <a href="https://plus.google.com/+MaximeBourdel09/posts">  
+                    <button class="btn btn-md btn-googleplus">
+                        <i class="fa fa-google-plus"> Google+</i>
+                    </button>
+                </a>
+                <a href="https://www.facebook.com/maxime.bourdel">  
+                    <button class="btn btn-md btn-facebook">
+                        <i class="fa fa-facebook"> Facebook</i>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/profile/view?id=342130999&trk=nav_responsive_tab_profile_pic">  
+                    <button class="btn btn-md btn-linkedin">
+                        <i class="fa fa-linkedin"> Linked In</i> 
+                    </button> 
+                </a> 
+                 <a href=" https://github.com/maximebourdel">  
+                    <button class="btn btn-md btn-github">
+                        <i class="fa fa-github-square"> Github</i>
+                    </button>
+                </a>  
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- One column of text below the carousel -->
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+              <img class="img-circle" src="../../../resources/img/photoPro.jpeg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+              <h2>This is me</h2>
+              <p>This website is done for everyone, but not made to make fun of people.</p>
+          </div>
+      </div><!-- /.row -->
+    </div>
+
 
 
 {% endblock %}

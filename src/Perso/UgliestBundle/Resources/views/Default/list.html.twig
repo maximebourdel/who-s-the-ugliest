@@ -5,15 +5,16 @@
       Here are the all the competitors
     </h2>
     
-    <section class="row">
+    <section class="row placeholders">
         {% for person in list_persons %}
         <div class="col-lg-2"
-             style="border-radius: 6px; border: 2px solid black; line-height: 40px; text-align: center; padding-top: 8px;"
+             style="border-radius: 6px; line-height: 40px; text-align: center; padding-top: 8px;"
         >
             {% if person.photo is not null %}
                 <img style="max-width: 150px;"
     				src="{{ asset(person.photo.webPath) }}"
       				alt="{{ person.photo.alt }}"
+      				class="img-circle"
     			/> 
             {% endif %}
             <div class="col-lg-12" style="max-height: 40px;">

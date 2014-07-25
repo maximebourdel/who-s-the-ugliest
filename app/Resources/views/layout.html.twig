@@ -57,53 +57,18 @@
         </div>
    
    
-       
-        {% stylesheets filter='cssrewrite,?yui_css' '@MopaBootstrapBundle/Resources/bootstrap/dist/css/*'%}
-    		<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
-    	{% endstylesheets %}
-    	
-    	<link href="../../app/Resources/views/css/brand-buttons.min.css"   rel="stylesheet">
-    	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    	
-    	
-    	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-    	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    	
-        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/dist/js/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    
-    	{% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
         
-        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/tests/unit/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-        
-        	
-        <!--javascript -->
-    	{% block javascripts %}
-    	
-    	{% endblock %}
-        <!--/javascript -->
-
-    	
- 
+        <br />
+        <br />
+        <br />
         
     
-        <br />
-        <br />
-        <br />
-        
     
         <footer class="bs-docs-footer" role="contentinfo">
         
             <div class="container">
-            
-                <div class="col-md-2 btn-demo"></div>
                 
-                <div class="col-md-2 btn-demo">
+                <div class="col-md-2 btn-demo col-md-offset-2">
                    <a href="https://plus.google.com/+MaximeBourdel09/posts">  
                         <button class="btn btn-md btn-googleplus">
                             <i class="fa fa-google-plus"> Google+</i>
@@ -135,7 +100,6 @@
                     </a>  
                 </div>
             
-                <div class="col-md-2 btn-demo"></div>
             
             
                 <div class="col-md-12 btn-demo">
@@ -145,6 +109,49 @@
             </div>
             
         </footer>
+   
+   
+   
+       
+        {% stylesheets filter='cssrewrite,?yui_css' '@MopaBootstrapBundle/Resources/bootstrap/dist/css/*'%}
+    		<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    	{% endstylesheets %}
+    	
+    	<link href="../../app/Resources/views/css/brand-buttons.min.css"   rel="stylesheet">
+    	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    	
+    	
+    	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    	
+        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/dist/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    
+        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/docs/assets/css/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        
+            
+        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/docs/assets/css/src/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    
+    	{% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        
+        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/tests/unit/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        
+        <link href="../../app/Resources/views/css/carousel.css" rel="stylesheet">
+        	
+        <!--javascript -->
+    	{% block javascripts %}
+    	
+    	{% endblock %}
+        <!--/javascript -->
 
     </body>
     
