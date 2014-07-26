@@ -17,7 +17,7 @@
       				alt="{{ list_persons[1].photo.alt }}"
       				class="img-circle"
     			 /> 
-                <h4 class="text-center">Number 2</h4>
+                <h4 class="text-center" style="background-color:silver;">Second</h4>
                 <p class="text-muted text-center">{{ list_persons[1].points }} points</p>
             </div>
             
@@ -27,7 +27,7 @@
       				alt="{{ list_persons[0].photo.alt }}"
       				class="img-circle"
     			 /> 
-                <h4 class="text-center">Number 1</h4>
+                <h4 class="text-center" style="background-color:gold;">First</h4>
                 <p class="text-muted text-center">{{ list_persons[0].points }} points</p>
             </div>
             
@@ -37,7 +37,7 @@
       				alt="{{ list_persons[2].photo.alt }}"
       				class="img-circle"
     			/> 
-                <h4 class="text-center">Number 3</h4>
+                <h4 class="text-center" style="background-color:peru;">Third</h4>
                 <p class="text-muted text-center">{{ list_persons[2].points }} points</p>
             
             </div>
@@ -47,7 +47,7 @@
     </div>      
     
     
-    <h2 class="sub-header">Section title</h2>
+    <h2 class="sub-header">Complete list</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -56,6 +56,7 @@
                     <th>Name</th>
                     <th>Surname</th>
                     <th>Points</th>
+                    <th>Photo</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,12 +69,17 @@
                   <td>{{ loop.index }}</td>
                   <td>{{ person.name }}</td>
                   <td>{{ person.surname }}</td>
+                  <td>{{ person.points }}</td>
                   <td>
-                      {{ person.points }}
-                      {% if loop.first %}
+                      <img style="max-width: 30px;"
+        				src="{{ asset(person.photo.webPath) }}"
+          				alt="{{ person.photo.alt }}"
+          				class="img-circle"
+        	          />
+        	          {% if loop.first %}
                           <i class="glyphicon glyphicon-star"></i>
-                      {% endif %}
-                  </td>
+                      {% endif %} 
+    			  </td>
                 </tr>   
             {% endfor %}
             </tbody>
