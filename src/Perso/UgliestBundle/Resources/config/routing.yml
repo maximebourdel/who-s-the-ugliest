@@ -13,4 +13,7 @@ perso_ugliest_list:
 perso_ugliest_create:
     path:     /create
     defaults: { _controller: "PersoUgliestBundle:Default:create" }
-  
+
+perso_ugliest_ranking:
+    path:     /ranking
+    defaults: { _controller: "PersoUgliestBundle:Default:ranking" }    

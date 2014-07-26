@@ -101,4 +101,15 @@ class DefaultController extends Controller
        } 
             
     }
+    
+    public function rankingAction()
+    {
+        // On récupère les articleCompetence pour l'article $article
+        $list_persons = $this->getDoctrine ()->getManager ()->getRepository ( 'PersoUgliestBundle:Person' )->getAllOrderPoints();
+    
+        // Puis modifiez la ligne du render comme ceci, pour prendre en compte les variables :
+        return $this->render ( 'PersoUgliestBundle:Default:ranking.html.twig', array (
+                'list_persons' => $list_persons
+        ) );
+    }
 }

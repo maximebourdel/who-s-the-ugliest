@@ -1,0 +1,87 @@
+{% extends "::layout.html.twig" %} 
+
+{% block title %}
+	{{parent() }} - Index
+{% endblock %} 
+
+{% block body %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+        <h1 class="page-header">TOP 3</h1>
+
+        <div class="row placeholders">
+        
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img style="max-width: 200px;"
+    				src="{{ asset(list_persons[1].photo.webPath) }}"
+      				alt="{{ list_persons[1].photo.alt }}"
+      				class="img-circle"
+    			 /> 
+                <h4 class="text-center">Number 2</h4>
+                <p class="text-muted text-center">{{ list_persons[1].points }} points</p>
+            </div>
+            
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img style="max-width: 200px;"
+    				src="{{ asset(list_persons[0].photo.webPath) }}"
+      				alt="{{ list_persons[0].photo.alt }}"
+      				class="img-circle"
+    			 /> 
+                <h4 class="text-center">Number 1</h4>
+                <p class="text-muted text-center">{{ list_persons[0].points }} points</p>
+            </div>
+            
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img style="max-width: 200px;"
+    				src="{{ asset(list_persons[2].photo.webPath) }}"
+      				alt="{{ list_persons[2].photo.alt }}"
+      				class="img-circle"
+    			/> 
+                <h4 class="text-center">Number 3</h4>
+                <p class="text-muted text-center">{{ list_persons[2].points }} points</p>
+            
+            </div>
+            
+        </div>
+        
+    </div>      
+    
+    
+    <h2 class="sub-header">Section title</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for person in list_persons %}
+                <tr 
+                    {% if loop.index == 1  %} style="background-color:gold;" {% endif %}
+                    {% if loop.index == 2  %} style="background-color:silver;" {% endif %}
+                    {% if loop.index == 3  %} style="background-color:peru;" {% endif %}
+                >
+                  <td>{{ loop.index }}</td>
+                  <td>{{ person.name }}</td>
+                  <td>{{ person.surname }}</td>
+                  <td>
+                      {{ person.points }}
+                      {% if loop.first %}
+                          <i class="glyphicon glyphicon-star"></i>
+                      {% endif %}
+                  </td>
+                </tr>   
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}
+
+{% block javascripts %}
+    <script> $('#ranking').addClass('active')</script>
+{% endblock %}

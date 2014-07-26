@@ -12,4 +12,24 @@ use Doctrine\ORM\EntityRepository;
  */
 class PersonRepository extends EntityRepository
 {
+    public function getAllOrderPoints()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+    
+        // Méthode équivalente, mais plus longue :
+        $queryBuilder = $this->_em->createQueryBuilder()
+            ->select('a')
+            ->from($this->_entityName, 'a')
+            ->orderBy('a.points', 'DESC');
+    
+        // On récupère la Query à partir du QueryBuilder
+        $query = $queryBuilder->getQuery();
+    
+        // On récupère les résultats à partir de la Query
+        $resultats = $query->getResult();
+    
+        // On retourne ces résultats
+        return $resultats;
+    }
+    
 }
