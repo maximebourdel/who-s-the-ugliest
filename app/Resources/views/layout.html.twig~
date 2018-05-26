@@ -115,19 +115,10 @@
     	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
     	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     	
-        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/dist/js/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    
+       
        
             
-        {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/docs/assets/css/src/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
     
-    	{% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/*' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
         
         {% javascripts '@MopaBootstrapBundle/Resources/bootstrap/js/tests/unit/*' %}
             <script src="{{ asset_url }}"></script>

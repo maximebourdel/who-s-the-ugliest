@@ -46,6 +46,8 @@
         
     </div>      
     
+    {{ list_persons[2].photo.webPath }}
+    
     <h2 class="sub-header">Complete list</h2>
     <div class="table-responsive">
         <table class="table table-striped">

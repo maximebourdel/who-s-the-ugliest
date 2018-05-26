@@ -34,7 +34,7 @@ class Articles implements FixtureInterface
             // On crée la catégorie
         
             $photo= new Photo();
-            $photo->setUrl("jpeg");
+            $photo->setUrl("png");
             $photo->setAlt($name[$i]);
         
             // On la persiste
